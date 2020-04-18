@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+
+unlink "$HOME/.gitconfig"
+for file in $(git ls-files); do
+  unlink "$HOME/$file"
+done
+

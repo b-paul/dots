@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+
+for file in $(git ls-files); do
+  mkdir -p "$HOME/$(dirname $file)"
+  ln -s "$PWD/$file" "$HOME/$file"
+done
+

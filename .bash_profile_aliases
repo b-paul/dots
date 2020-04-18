@@ -1,0 +1,11 @@
+# List all files colorized in long format, including dot files
+alias la="ls -laF ${colorflag}"
+
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
+
+# Reload the shell (i.e. invoke as a login shell)
+alias reload="exec $SHELL -l"
+
+alias cd=cdls
+

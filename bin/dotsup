@@ -1,6 +1,16 @@
 #! /usr/bin/env bash
 
-for file in $(git ls-files); do
+SOURCE=$BASH_SOURCE
+while [ -h $SOURCE ]; do
+  NEW_SOURCE=$(readlink $SOURCE)
+  [[ $NEW_SOURCE != /* ]] && NEW_SOURCE=$(dirname $SOURCE)/$NEW_SOURCE
+  SOURCE=$NEW_SOURCE
+done
+
+cd "$(dirname $SOURCE)"
+cd "$(git rev-parse --show-toplevel)"
+
+for file in $(git ls-tree -r HEAD --name-only); do
   mkdir -p "$HOME/$(dirname $file)"
   ln -s "$PWD/$file" "$HOME/$file"
 done

@@ -1,6 +1,5 @@
 set nocompatible
 
-
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -36,9 +35,6 @@ set gdefault
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
 
-" Change mapleader
-let mapleader=","
-
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
@@ -48,10 +44,6 @@ endif
 
 " Don’t create backups when editing files in certain directories
 set backupskip=/tmp/*,/private/tmp/*
-
-" Respect modeline in files
-set modeline
-set modelines=4
 
 " Enable per-directory .vimrc files and disable unsafe commands in them
 set exrc
@@ -101,12 +93,14 @@ set showcmd
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
+" Change mapleader
+let mapleader=","
+
 noremap <leader>. :
 
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 " Turn on case-insensitive feature
 let g:EasyMotion_smartcase = 1
-
 
 " `s{char}{char}{label}`
 " Need one more keystroke, but on average, it may be more comfortable.

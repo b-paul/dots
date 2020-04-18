@@ -15,9 +15,12 @@ cd "$(git rev-parse --show-toplevel)"
 for file in $@; do
   fileloc="$HOME/$file"
   repoloc="$PWD/$file"
-  if [ -h $repoloc ]; then
+  if [ -h $fileloc ]; then
     unlink "$fileloc"
     mv "$repoloc" "$fileloc"
+  fi
+  if [ ! -h $fileloc ]; then
+    rm -f "$repoloc"
   fi
 done
 

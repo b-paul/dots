@@ -13,7 +13,7 @@ cd "$(git rev-parse --show-toplevel)"
 for file in $@; do
   fileloc="$HOME/$file"
   if [ -a $fileloc ]; then
-    cp "$fileloc" "./$file" && ln -s "$PWD/$file" "$fileloc"
+    cp "$fileloc" "./$file" && ln -sf "$PWD/$file" "$fileloc" || rm "$PWD/$file"
   fi
 done
 

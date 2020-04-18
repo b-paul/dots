@@ -13,14 +13,14 @@ cd "$(dirname $SOURCE)"
 cd "$(git rev-parse --show-toplevel)"
 
 for file in $@; do
-  fileloc="$HOME/$file"
-  repoloc="$PWD/$file"
-  if [ -h $fileloc ]; then
-    unlink "$fileloc"
-    mv "$repoloc" "$fileloc"
+  targetloc="$HOME/$file"
+  sourceloc="$PWD/$file"
+  if [ -h $targetloc ]; then
+    unlink "$targetloc"
+    mv "$sourceloc" "$targetloc"
   fi
-  if [ ! -h $fileloc ]; then
-    rm -f "$repoloc"
+  if [ ! -h $targetloc ]; then
+    rm -f "$sourceloc"
   fi
 done
 

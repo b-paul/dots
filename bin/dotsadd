@@ -13,9 +13,11 @@ cd "$(dirname $SOURCE)"
 cd "$(git rev-parse --show-toplevel)"
 
 for file in $@; do
-  fileloc="$HOME/$file"
-  if [ -f $fileloc ]; then
-    cp "$fileloc" "./$file" && ln -sf "$PWD/$file" "$fileloc" || rm "$PWD/$file"
+  sourceloc="$HOME/$file"
+  targetloc="$PWD/$file"
+  if [ -f $sourceloc ]; then
+    mkdir -p "$(dirname $targetloc)"
+    cp "$sourceloc" "$targetloc" && ln -sf "$targetloc" "$sourceloc" || rm "$targetloc"
   fi
 done
 

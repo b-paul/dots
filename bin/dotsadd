@@ -10,8 +10,10 @@ done
 cd "$(dirname $SOURCE)"
 cd "$(git rev-parse --show-toplevel)"
 
-unlink "$HOME/.gitconfig"
-for file in $(git ls-tree -r HEAD --name-only); do
-  unlink "$HOME/$file"
+for file in $@; do
+  fileloc="$HOME/$file"
+  if [ -a $fileloc ]; then
+    cp "$fileloc" "./$file" && ln -s "$PWD/$file" "$fileloc"
+  fi
 done
 

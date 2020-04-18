@@ -2,8 +2,8 @@
 
 SOURCE=$BASH_SOURCE
 while [ -h $SOURCE ]; do
-  NEW_SOURCE=$(readlink $SOURCE)
-  [[ $NEW_SOURCE != /* ]] && NEW_SOURCE=$(dirname $SOURCE)/$NEW_SOURCE
+  NEW_SOURCE="$(readlink $SOURCE)"
+  [[ $NEW_SOURCE != /* ]] && NEW_SOURCE="$(dirname $SOURCE)/$NEW_SOURCE"
   SOURCE=$NEW_SOURCE
 done
 

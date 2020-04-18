@@ -80,3 +80,8 @@
     changed = green
     untracked = cyan
 
+[user]
+
+    name = "Paul Anderson"
+    email = "paul@andersonpaul.com"
+

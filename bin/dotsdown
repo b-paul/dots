@@ -2,15 +2,7 @@
 
 set -e
 
-SOURCE=$BASH_SOURCE
-while [ -h $SOURCE ]; do
-  NEW_SOURCE="$(readlink $SOURCE)"
-  [[ $NEW_SOURCE != /* ]] && NEW_SOURCE="$(dirname $SOURCE)/$NEW_SOURCE"
-  SOURCE=$NEW_SOURCE
-done
-
-cd "$(dirname $SOURCE)"
-cd "$(git rev-parse --show-toplevel)"
+source "$HOME/bin/cdotfiles"
 
 unlink "$HOME/.gitconfig"
 for file in $(git ls-tree -r HEAD --name-only); do

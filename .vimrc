@@ -11,8 +11,15 @@ Plug 'vim-scripts/ShowTrailingWhitespace'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-fugitive'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
+
+" Theme
+set termguicolors
+set background=dark
+let g:gruvbox_contrast_dark = "medium"
+colorscheme gruvbox
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed

@@ -2,7 +2,7 @@
 
 set -e
 
-source "$HOME/bin/cdotfiles"
+source "$(dirname $0)/cdotfiles"
 
 unlink "$HOME/.gitconfig"
 for file in $(git ls-tree -r HEAD --name-only); do

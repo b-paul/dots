@@ -2,15 +2,7 @@
 
 set -e
 
-SOURCE=$BASH_SOURCE
-while [ -h $SOURCE ]; do
-  NEW_SOURCE="$(readlink $SOURCE)"
-  [[ $NEW_SOURCE != /* ]] && NEW_SOURCE="$(dirname $SOURCE)/$NEW_SOURCE"
-  SOURCE=$NEW_SOURCE
-done
-
-cd "$(dirname $SOURCE)"
-cd "$(git rev-parse --show-toplevel)"
+source "$(dirname $0)/cdotfiles"
 
 for file in $@; do
   targetloc="$HOME/$file"

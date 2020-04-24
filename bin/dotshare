@@ -4,5 +4,6 @@ set -e
 
 source "$(dirname $0)/cdotfiles"
 
-git add . && git commit -m "dotfiles as of $(date)" && git push
+git add . && git commit -m "dotfiles as of $(date)" || true
+git push
 

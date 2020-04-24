@@ -85,3 +85,5 @@
     name = "Paul Anderson"
     email = "paul@andersonpaul.com"
 
+[advice]
+	addIgnoredFile = true

@@ -1,3 +1,5 @@
+"""" PLUGINS """"
+
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -7,17 +9,35 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'vim-scripts/ShowTrailingWhitespace'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'easymotion/vim-easymotion'
-Plug 'tpope/vim-fugitive'
 Plug 'morhetz/gruvbox'
 call plug#end()
 
+"""" UI SETTINGS """"
 
 " Theme
 set termguicolors
 set background=dark
 let g:gruvbox_contrast_dark = "medium"
 colorscheme gruvbox
+
+" Enable syntax highlighting
+syntax on
+
+" Enable line numbers
+set number
+set relativenumber
+set numberwidth=6
+
+" Make tabs as wide as two spaces
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+" Ignore case of searches
+set ignorecase
+
+" Highlight dynamically as pattern is typed
+set incsearch
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
@@ -31,11 +51,37 @@ set esckeys
 " Allow backspace in insert mode
 set backspace=indent,eol,start
 
+" Don’t reset cursor to start of line when moving around.
+set nostartofline
+
+" Show the current mode
+set showmode
+
+" Show the filename in the window titlebar
+set title
+
+" Show the (partial) command as it’s being typed
+set showcmd
+
+" Always show status line
+set laststatus=2
+
+" Enable mouse in all modes
+set mouse=a
+
+" Disable error bells
+set noerrorbells
+
+" Start scrolling three lines before the horizontal window border
+set scrolloff=3
+
+" Don’t show the intro message when starting Vim
+set shortmess=atI
+
+"""" SYSTEM """"
+
 " Optimize for fast terminal connections
 set ttyfast
-
-" Add the g flag to search/replace by default
-set gdefault
 
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
@@ -54,66 +100,18 @@ set backupskip=/tmp/*,/private/tmp/*
 set exrc
 set secure
 
-" Enable line numbers
-set number
-set relativenumber
-set numberwidth=6
-
-" Enable syntax highlighting
-syntax on
-
-" Make tabs as wide as two spaces
-set tabstop=2
-
-" Ignore case of searches
-set ignorecase
-
-" Highlight dynamically as pattern is typed
-set incsearch
-
-" Always show status line
-set laststatus=2
-
-" Enable mouse in all modes
-set mouse=a
-
-" Disable error bells
-set noerrorbells
-
-" Don’t reset cursor to start of line when moving around.
-set nostartofline
-
-" Don’t show the intro message when starting Vim
-set shortmess=atI
-
-" Show the current mode
-set showmode
-
-" Show the filename in the window titlebar
-set title
-
-" Show the (partial) command as it’s being typed
-set showcmd
-
-" Start scrolling three lines before the horizontal window border
-set scrolloff=3
+"""" SHORTCUTS """"
 
 " Change mapleader
 let mapleader=","
 
 noremap <leader>. :
 
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-" Turn on case-insensitive feature
-let g:EasyMotion_smartcase = 1
-
-" `s{char}{char}{label}`
-" Need one more keystroke, but on average, it may be more comfortable.
-nmap s <Plug>(easymotion-overwin-f2)
-
 :command! OpenCwdInVSCode exe "silent !code '" . getcwd() . "' --goto '" . expand("%") . ":" . line(".") . ":" . col(".") . "'" | redraw!
+" TODO should have a shortcut for this
 
-" Automatic commands
+"""" AUTOCMD """"
+
 if has("autocmd")
   " Enable file type detection
   filetype on

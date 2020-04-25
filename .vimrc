@@ -113,6 +113,8 @@ let g:EasyMotion_smartcase = 1
 " Need one more keystroke, but on average, it may be more comfortable.
 nmap s <Plug>(easymotion-overwin-f2)
 
+:command! OpenCwdInVSCode exe "silent !code '" . getcwd() . "' --goto '" . expand("%") . ":" . line(".") . ":" . col(".") . "'" | redraw!
+
 " Automatic commands
 if has("autocmd")
   " Enable file type detection
@@ -122,3 +124,4 @@ if has("autocmd")
   " Treat .md files as Markdown
   autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
+

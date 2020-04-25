@@ -5,7 +5,12 @@ set -e
 source "$(dirname $0)/cdotfiles"
 
 for file in $(git ls-tree -r HEAD --name-only); do
-  mkdir -p "$HOME/$(dirname $file)"
-  ln -s "$PWD/$file" "$HOME/$file" || true
+  sourceloc="$PWD/$file"
+  targetloc="$HOME/$file"
+  mkdir -p "$(dirname $file)"
+  if [ -h $targetloc ]; then
+    rm "$targetloc"
+  fi
+  ln -s "$sourceloc" "$targetloc" || true
 done
 

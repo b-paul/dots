@@ -5,4 +5,5 @@ set -e
 source "$(dirname $0)/cdotfiles"
 
 git pull
+dotsup
 

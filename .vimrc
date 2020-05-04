@@ -102,8 +102,8 @@ set encoding=utf-8 nobomb
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
-if exists("&undodir")
-    set undodir=~/.vim/undo
+if exists('&undodir')
+  set undodir=~/.vim/undo
 endif
 
 " Don’t create backups when editing files in certain directories
@@ -121,21 +121,25 @@ vnoremap <silent> <C-S> <esc>:<C-u>w<CR>gv
 inoremap <silent> <C-S> <C-o>:w<CR>
 
 " Change mapleader
-let mapleader=" "
+let mapleader=' '
 nnoremap <Space> <Nop>
 
 noremap <Leader>c :
 noremap <Leader>ev :vsplit $MYVIMRC<CR>
-noremap <Leader>sv source $MYVIMRC<CR>
+" TODO need to have some autocmd to source the file when closed, and apply it
+" on open
+noremap <Leader>sv :source $MYVIMRC<CR>
 
 """" AUTOCMD """"
 
-if has("autocmd")
-  " Enable file type detection
-  filetype on
-  " Treat .json files as .js
-  autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-  " Treat .md files as Markdown
-  autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+if has('autocmd')
+  augroup autocmds
+    " Enable file type detection
+    filetype on
+    " Treat .json files as .js
+    autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+    " Treat .md files as Markdown
+    autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+  augroup END
 endif
 

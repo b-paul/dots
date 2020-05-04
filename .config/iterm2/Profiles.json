@@ -109,7 +109,7 @@
   "Non Ascii Font" : "Monaco 12",
   "Vertical Spacing" : 1.01,
   "Use Bold Font" : true,
-  "Option Key Sends" : 0,
+  "Option Key Sends" : 2,
   "Selected Text Color" : {
     "Red Component" : 0.5926094651222229,
     "Color Space" : "Calibrated",
@@ -361,7 +361,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.69061970710754395
   },
-  "Right Option Key Sends" : 0,
+  "Right Option Key Sends" : 2,
   "Ansi 3 Color" : {
     "Red Component" : 0.96949708461761475,
     "Color Space" : "Calibrated",
@@ -517,7 +517,7 @@
   "Non Ascii Font" : "Monaco 12",
   "Vertical Spacing" : 1.01,
   "Use Bold Font" : true,
-  "Option Key Sends" : 0,
+  "Option Key Sends" : 2,
   "Selected Text Color" : {
     "Red Component" : 0.5926094651222229,
     "Color Space" : "Calibrated",
@@ -767,7 +767,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.69061970710754395
   },
-  "Right Option Key Sends" : 0,
+  "Right Option Key Sends" : 2,
   "Ansi 3 Color" : {
     "Red Component" : 0.96949708461761475,
     "Color Space" : "Calibrated",
@@ -839,7 +839,7 @@
     "Green Component" : 0.82989895343780518
   },
   "HotKey Window Floats" : true,
-  "Right Option Key Sends" : 0,
+  "Right Option Key Sends" : 2,
   "Character Encoding" : 4,
   "Selection Color" : {
     "Red Component" : 0.40959125757217407,
@@ -1183,7 +1183,7 @@
   "Command" : "",
   "Terminal Type" : "xterm-256color",
   "Horizontal Spacing" : 1,
-  "Option Key Sends" : 0,
+  "Option Key Sends" : 2,
   "HotKey Window Animates" : false,
   "HotKey Modifier Flags" : 262144,
   "Ansi 15 Color" : {

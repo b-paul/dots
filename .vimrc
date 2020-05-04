@@ -1,27 +1,35 @@
 """" PLUGINS """"
 
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+let rp1 = split(&runtimepath, ",")[0]
+let plugvim = rp1 . '/autoload/plug.vim'
+let plugindir = rp1 . '/plugged'
+
+if empty(glob(plugvim))
+  silent execute '!curl -fLo ' . plugvim . ' --create-dirs' .
+        \ ' https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call plug#begin('~/.vim/plugged')
+call plug#begin(plugindir)
 Plug 'vim-scripts/ShowTrailingWhitespace'
+Plug 'tpope/vim-sensible'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'jiangmiao/auto-pairs'
 Plug 'morhetz/gruvbox'
 call plug#end()
 
 """" UI SETTINGS """"
+
+" Enable syntax highlighting
+syntax enable
 
 " Theme
 set termguicolors
 set background=dark
 let g:gruvbox_contrast_dark = "medium"
 colorscheme gruvbox
-
-" Enable syntax highlighting
-syntax on
+"" colorscheme sets Visual highlight to reverse"
+highlight Visual cterm=bold
 
 " Enable line numbers
 set number
@@ -32,6 +40,9 @@ set numberwidth=6
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
+" Don't wrap lines by default
+set nowrap
 
 " Ignore case of searches
 set ignorecase
@@ -46,7 +57,9 @@ set clipboard=unnamed
 set wildmenu
 
 " Allow cursor keys in insert mode
-set esckeys
+if (!has('nvim'))
+  set esckeys
+endif
 
 " Allow backspace in insert mode
 set backspace=indent,eol,start
@@ -102,13 +115,18 @@ set secure
 
 """" SHORTCUTS """"
 
+" Save with Ctrl+S (Cmd+S doesn't seem to work)
+nnoremap <silent> <C-S> :<C-u>w<CR>
+vnoremap <silent> <C-S> <esc>:<C-u>w<CR>gv
+inoremap <silent> <C-S> <C-o>:w<CR>
+
 " Change mapleader
-let mapleader=","
+let mapleader=" "
+nnoremap <Space> <Nop>
 
-noremap <leader>. :
-
-:command! OpenCwdInVSCode exe "silent !code '" . getcwd() . "' --goto '" . expand("%") . ":" . line(".") . ":" . col(".") . "'" | redraw!
-" TODO should have a shortcut for this
+noremap <Leader>c :
+noremap <Leader>ev :vsplit $MYVIMRC<CR>
+noremap <Leader>sv source $MYVIMRC<CR>
 
 """" AUTOCMD """"
 

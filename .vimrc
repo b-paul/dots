@@ -1,16 +1,16 @@
-"""" PLUGINS """"
+" *** PLUGINS ***
 
-let rp1 = split(&runtimepath, ",")[0]
-let plugvim = rp1 . '/autoload/plug.vim'
-let plugindir = rp1 . '/plugged'
+let s:rp1 = split(&runtimepath, ",")[0]
+let s:plugvim = s:rp1 . '/autoload/plug.vim'
+let s:plugindir = s:rp1 . '/plugged'
 
-if empty(glob(plugvim))
+if empty(glob(s:plugvim))
   silent execute '!curl -fLo ' . plugvim . ' --create-dirs' .
         \ ' https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call plug#begin(plugindir)
+call plug#begin(s:plugindir)
 Plug 'vim-scripts/ShowTrailingWhitespace'
 Plug 'tpope/vim-sensible'
 Plug 'editorconfig/editorconfig-vim'
@@ -18,7 +18,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'morhetz/gruvbox'
 call plug#end()
 
-"""" UI SETTINGS """"
+" *** UI SETTINGS ***
 
 " Enable syntax highlighting
 syntax enable
@@ -91,7 +91,10 @@ set scrolloff=3
 " Don’t show the intro message when starting Vim
 set shortmess=atI
 
-"""" SYSTEM """"
+" Set vertical splits to appear to the right
+set splitright
+
+" *** SYSTEM ***
 
 " Optimize for fast terminal connections
 set ttyfast
@@ -113,7 +116,7 @@ set backupskip=/tmp/*,/private/tmp/*
 set exrc
 set secure
 
-"""" SHORTCUTS """"
+" *** SHORTCUTS ***
 
 " Save with Ctrl+S (Cmd+S doesn't seem to work)
 nnoremap <silent> <C-S> :<C-u>w<CR>
@@ -130,7 +133,7 @@ noremap <Leader>ev :vsplit $MYVIMRC<CR>
 " on open
 noremap <Leader>sv :source $MYVIMRC<CR>
 
-"""" AUTOCMD """"
+" *** AUTOCMD ***
 
 if has('autocmd')
   augroup autocmds

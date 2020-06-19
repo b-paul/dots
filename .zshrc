@@ -9,7 +9,7 @@ source ~/.config/zsh/omz_config.zsh
 source ~/.config/zsh/p10k_config.zsh
 source ~/.config/zsh/zplug_config.zsh
 
-source .config/zsh/path.zsh;
+source ~/.config/zsh/path.zsh;
 
 # alias nvim as vim
 alias vim=nvim

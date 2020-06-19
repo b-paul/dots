@@ -85,6 +85,7 @@
   "BM Growl" : true,
   "Command" : "",
   "Description" : "Default",
+  "Smart Cursor Color" : true,
   "Mouse Reporting" : true,
   "Screen" : -1,
   "Selection Color" : {
@@ -492,7 +493,7 @@
   "Mouse Reporting" : true,
   "Command" : "",
   "Description" : "Default",
-  "Disable Window Resizing" : true,
+  "Smart Cursor Color" : true,
   "Screen" : -1,
   "Selection Color" : {
     "Red Component" : 0.40959125757217407,
@@ -501,6 +502,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.360250324010849
   },
+  "Disable Window Resizing" : true,
   "Columns" : 180,
   "Idle Code" : 0,
   "Ansi 13 Color" : {
@@ -1156,6 +1158,7 @@
     "Alpha Component" : 0.5,
     "Green Component" : 0
   },
+  "Smart Cursor Color" : true,
   "Ambiguous Double Width" : false,
   "Blur Radius" : 2,
   "Ansi 0 Color" : {

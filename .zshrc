@@ -11,6 +11,9 @@ source ~/.config/zsh/zplug_config.zsh
 
 source .config/zsh/path.zsh;
 
+# alias nvim as vim
+alias vim=nvim
+
 # ls whenever changing directories
 function chpwd() {
     emulate -L zsh

@@ -85,7 +85,6 @@
   "BM Growl" : true,
   "Command" : "",
   "Description" : "Default",
-  "Smart Cursor Color" : true,
   "Mouse Reporting" : true,
   "Screen" : -1,
   "Selection Color" : {
@@ -391,11 +390,11 @@
     "Green Component" : 0.05879192054271698
   },
   "Ansi 4 Color" : {
-    "Red Component" : 0.40794947743415833,
-    "Color Space" : "sRGB",
-    "Blue Component" : 0.53936767578125,
+    "Red Component" : 0.44289660453796387,
+    "Color Space" : "Calibrated",
+    "Blue Component" : 0.52537077665328979,
     "Alpha Component" : 1,
-    "Green Component" : 0.51925068106356775
+    "Green Component" : 0.58534377813339233
   },
   "Ansi 5 Color" : {
     "Red Component" : 0.78096956014633179,
@@ -493,7 +492,7 @@
   "Mouse Reporting" : true,
   "Command" : "",
   "Description" : "Default",
-  "Smart Cursor Color" : true,
+  "Disable Window Resizing" : true,
   "Screen" : -1,
   "Selection Color" : {
     "Red Component" : 0.40959125757217407,
@@ -502,7 +501,6 @@
     "Alpha Component" : 1,
     "Green Component" : 0.360250324010849
   },
-  "Disable Window Resizing" : true,
   "Columns" : 180,
   "Idle Code" : 0,
   "Ansi 13 Color" : {
@@ -797,11 +795,11 @@
     "Green Component" : 0.05879192054271698
   },
   "Ansi 4 Color" : {
-    "Red Component" : 0.40784313725490196,
-    "Color Space" : "sRGB",
-    "Blue Component" : 0.53725490196078429,
+    "Red Component" : 0.44289660453796387,
+    "Color Space" : "Calibrated",
+    "Blue Component" : 0.52537077665328979,
     "Alpha Component" : 1,
-    "Green Component" : 0.51764705882352946
+    "Green Component" : 0.58534377813339233
   },
   "Ansi 5 Color" : {
     "Red Component" : 0.78096956014633179,
@@ -851,11 +849,11 @@
   "Blend" : 0.5,
   "Mouse Reporting" : true,
   "Ansi 4 Color" : {
-    "Red Component" : 0.40784313725490196,
-    "Color Space" : "sRGB",
-    "Blue Component" : 0.53725490196078429,
+    "Red Component" : 0.44289660453796387,
+    "Color Space" : "Calibrated",
+    "Blue Component" : 0.52537077665328979,
     "Alpha Component" : 1,
-    "Green Component" : 0.51764705882352946
+    "Green Component" : 0.58534377813339233
   },
   "Non-ASCII Anti Aliased" : true,
   "Sync Title" : false,
@@ -1158,7 +1156,6 @@
     "Alpha Component" : 0.5,
     "Green Component" : 0
   },
-  "Smart Cursor Color" : true,
   "Ambiguous Double Width" : false,
   "Blur Radius" : 2,
   "Ansi 0 Color" : {

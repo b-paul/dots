@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+
+source $HOME/bin/plist/pl.andsn.upkeep.plist.sh > $HOME/Library/LaunchAgents/pl.andsn.upkeep.plist
+launchctl unload $HOME/Library/LaunchAgents/pl.andsn.upkeep.plist > /dev/null 2>&1
+launchctl load $HOME/Library/LaunchAgents/pl.andsn.upkeep.plist
+launchctl start $HOME/Library/LaunchAgents/pl.andsn.upkeep.plist
+

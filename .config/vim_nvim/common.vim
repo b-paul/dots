@@ -64,8 +64,7 @@ set expandtab
 
 " Default autoformatting for coding
 set textwidth=80
-set fo+=ajc
-set fo-=t2
+set fo=ajcroq1
 
 " *** SYSTEM ***
 

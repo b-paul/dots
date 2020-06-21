@@ -62,6 +62,11 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" Default autoformatting for coding
+set textwidth=80
+set fo+=ajc
+set fo-=t2
+
 " *** SYSTEM ***
 
 " Optimize for fast terminal connections

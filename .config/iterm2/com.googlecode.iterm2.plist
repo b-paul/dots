@@ -11482,7 +11482,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 363 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>70 161 1270 684 0 0 1440 877 </string>
+	<string>156 15 1270 480 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>170 193 1270 684 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -12190,6 +12190,8 @@
 			<string></string>
 			<key>Silence Bell</key>
 			<false/>
+			<key>Smart Cursor Color</key>
+			<true/>
 			<key>Sync Title</key>
 			<false/>
 			<key>Tags</key>
@@ -12916,6 +12918,8 @@
 			<string>T</string>
 			<key>Silence Bell</key>
 			<false/>
+			<key>Smart Cursor Color</key>
+			<true/>
 			<key>Space</key>
 			<integer>0</integer>
 			<key>Sync Title</key>
@@ -13680,6 +13684,8 @@
 			<string></string>
 			<key>Silence Bell</key>
 			<false/>
+			<key>Smart Cursor Color</key>
+			<true/>
 			<key>Space</key>
 			<integer>-1</integer>
 			<key>Sync Title</key>
@@ -14552,7 +14558,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-06-20T05:11:37Z</date>
+	<date>2020-06-21T05:11:37Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
@@ -14583,6 +14589,8 @@
 	<false/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>iTerm Version</key>
 	<string>3.3.11</string>
 </dict>

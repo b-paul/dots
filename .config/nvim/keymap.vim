@@ -2,11 +2,11 @@
 nnoremap <C-p> :<C-u>GFiles<CR>
 
 " Move lines down
-nnoremap <C-J> :move .+1<CR>
-vnoremap <C-J> :move '>+1<CR>gv
+nnoremap <silent> <C-J> :move .+1<CR>
+vnoremap <silent> <C-J> :move '>+1<CR>gv
 " Move lines up
-nnoremap <C-K> :move .-2<CR>
-vnoremap <C-K> :move '<-2<CR>gv
+nnoremap <silent> <C-K> :move .-2<CR>
+vnoremap <silent> <C-K> :move '<-2<CR>gv
 
 " Use C-/ or C-_ to toggle comments (these keystrokes look the same to vim)
 nmap <C-_> <Plug>NERDCommenterToggle

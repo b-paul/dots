@@ -3,5 +3,5 @@
 brew update && brew upgrade
 brew cask upgrade
 zsh -c 'source ~/.zshrc && (upgrade_oh_my_zsh; zplug update || true)' # zplug command succeeds but exits 1
-nvim -c PlugUpdate -c qa
+nvim -c PlugUpdate -c CocUpdate -c qa
 

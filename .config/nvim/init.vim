@@ -13,7 +13,7 @@ call plug#begin(s:plugindir)
 Plug 'vim-scripts/ShowTrailingWhitespace'
 Plug 'tpope/vim-sensible'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'jiangmiao/auto-pairs'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdcommenter'

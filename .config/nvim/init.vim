@@ -13,12 +13,13 @@ call plug#begin(s:plugindir)
 Plug 'vim-scripts/ShowTrailingWhitespace'
 Plug 'tpope/vim-sensible'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-unimpaired'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-repeat'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'mattn/emmet-vim'

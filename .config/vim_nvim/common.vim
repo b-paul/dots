@@ -11,6 +11,9 @@ set hidden
 " Don't wrap lines
 set nowrap
 
+" One space between sentences
+set nojoinspaces
+
 " Ignore case of searches
 set ignorecase
 
@@ -93,6 +96,12 @@ if has('autocmd')
     autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
     " Treat .md files as Markdown
     autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+    " Reset comments options in Markdown after plugin fucks them up
+    function s:FixMarkdownComments()
+      set comments-=b:-
+      set comments+=fb:-
+    endfunction
+    autocmd filetype markdown call s:FixMarkdownComments()
   augroup END
 endif
 

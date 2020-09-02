@@ -16,6 +16,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-unimpaired'
 Plug 'jeetsukumaran/vim-indentwise'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'dkrater/bullets.vim'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdcommenter'
@@ -24,6 +25,7 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'mattn/emmet-vim'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'sheerun/vim-polyglot'
 Plug 'honza/vim-snippets'
 Plug 'vim-airline/vim-airline'
@@ -47,8 +49,6 @@ source ~/.config/vim_nvim/common.vim
 
 source ~/.config/nvim/coc_config.vim
 
-command! OpenInVSCode execute "silent !code --goto '" . expand("%") . ":" . line(".") . ":" . col(".") . "'" | redraw!
-
 if !exists('*s:reloadConfig')
   function s:reloadConfig()
     source ~/.config/nvim/init.vim
@@ -56,6 +56,8 @@ if !exists('*s:reloadConfig')
   endfunction
 endif
 command! ReloadConfig call s:reloadConfig()
+
+let g:vim_markdown_new_list_item_indent = 0
 
 " *** KEYMAP ***
 source ~/.config/nvim/keymap.vim

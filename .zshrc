@@ -11,7 +11,10 @@ source ~/.config/zsh/zplug_config.zsh
 
 source ~/.config/zsh/path.zsh;
 
-# alias nvim as vim
+# do not update homebrew before install
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+# use nvim instead of vim
 alias vim=nvim
 
 # ls whenever changing directories

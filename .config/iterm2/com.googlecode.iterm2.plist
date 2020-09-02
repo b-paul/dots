@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AllowClipboardAccess</key>
-	<false/>
+	<true/>
 	<key>AlternateMouseScroll</key>
 	<true/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -11482,7 +11482,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 363 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>156 15 1270 480 0 0 1440 877 </string>
+	<string>3 5 1431 361 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>170 193 1270 684 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -14558,7 +14558,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-06-21T05:11:37Z</date>
+	<date>2020-06-24T05:12:06Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>

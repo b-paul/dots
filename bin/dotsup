@@ -8,7 +8,7 @@ source "$(dirname "$0")/cdotfiles"
 for file in $(git ls-tree -r HEAD --name-only); do
   sourceloc="$PWD/$file"
   targetloc="$HOME/$file"
-  mkdir -p "$(dirname "$file")"
+  mkdir -p "$(dirname "$targetloc")"
   if [ -h "$targetloc" ]; then
     rm "$targetloc"
   fi

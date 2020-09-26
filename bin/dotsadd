@@ -2,16 +2,16 @@
 
 set -e
 
-source "$(dirname $0)/cdotfiles"
+# shellcheck source=./cdotfiles
+source "$(dirname "$0")/cdotfiles"
 
-for file in $@; do
+for file in "$@"; do
   sourceloc="$HOME/$file"
   targetloc="$PWD/$file"
-  if [ -f $sourceloc ]; then
-    mkdir -p "$(dirname $targetloc)"
+  if [ -f "$sourceloc" ]; then
+    mkdir -p "$(dirname "$targetloc")"
     cp "$sourceloc" "$targetloc" && ln -sf "$targetloc" "$sourceloc" || rm "$targetloc"
   else
     echo "$sourceloc not found"
   fi
 done
-

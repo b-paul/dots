@@ -2,17 +2,17 @@
 
 set -e
 
-source "$(dirname $0)/cdotfiles"
+# shellcheck source=./cdotfiles
+source "$(dirname "$0")/cdotfiles"
 
-for file in $@; do
+for file in "$@"; do
   targetloc="$HOME/$file"
   sourceloc="$PWD/$file"
-  if [ -h $targetloc ]; then
+  if [ -h "$targetloc" ]; then
     unlink "$targetloc"
     mv "$sourceloc" "$targetloc"
   fi
-  if [ ! -h $targetloc ]; then
+  if [ ! -h "$targetloc" ]; then
     rm -f "$sourceloc"
   fi
 done
-

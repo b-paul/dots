@@ -2,15 +2,15 @@
 
 set -e
 
-source "$(dirname $0)/cdotfiles"
+# shellcheck source=./cdotfiles
+source "$(dirname "$0")/cdotfiles"
 
 for file in $(git ls-tree -r HEAD --name-only); do
   sourceloc="$PWD/$file"
   targetloc="$HOME/$file"
-  mkdir -p "$(dirname $file)"
-  if [ -h $targetloc ]; then
+  mkdir -p "$(dirname "$file")"
+  if [ -h "$targetloc" ]; then
     rm "$targetloc"
   fi
   ln -s "$sourceloc" "$targetloc" || true
 done
-

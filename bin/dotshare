@@ -2,7 +2,8 @@
 
 set -e
 
-source "$(dirname $0)/cdotfiles"
+# shellcheck source=./cdotfiles
+source "$(dirname "$0")/cdotfiles"
 
 for file in $(git ls-tree -r HEAD --name-only); do
   if [[ ( -e "$HOME/$file" ) && ( ! -h "$HOME/$file" ) ]]; then
@@ -12,4 +13,3 @@ done
 
 git add . && git commit -m "dotfiles as of $(date)" || true
 git push
-

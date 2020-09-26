@@ -1,3 +1,5 @@
+#!/usr/local/env bash
+
 cat <<ALLDONE
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"

@@ -2,10 +2,10 @@
 
 set -e
 
-source "$(dirname $0)/cdotfiles"
+# shellcheck source=./cdotfiles
+source "$(dirname "$0")/cdotfiles"
 
 unlink "$HOME/.gitconfig"
 for file in $(git ls-tree -r HEAD --name-only); do
   unlink "$HOME/$file"
 done
-

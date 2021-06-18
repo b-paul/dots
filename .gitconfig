@@ -87,3 +87,5 @@
 
 [advice]
 	addIgnoredFile = true
+[pull]
+	rebase = false

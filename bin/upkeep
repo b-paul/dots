@@ -1,6 +1,15 @@
 #! /usr/bin/env bash
 
-brew update && brew upgrade
-brew cask upgrade
-zsh -c 'source ~/.zshrc && (upgrade_oh_my_zsh; zplug update || true)' # zplug command succeeds but exits 1
-nvim -c PlugUpdate -c CocUpdate -c qa
+# brew update && brew upgrade
+
+# zsh -c 'source ~/.zshrc && (upgrade_oh_my_zsh; zplug update || true)' # zplug
+# command succeeds but exits 1
+
+echo "ran upkeep script at $(date)" >> /tmp/upkeep.log
+
+for logfile in /tmp/upkeep.log /tmp/upkeep.out /tmp/upkeep.err
+do
+  tail -10 $logfile > $logfile.next
+  mv -f $logfile.next $logfile
+done
+
